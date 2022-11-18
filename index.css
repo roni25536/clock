@@ -1,0 +1,154 @@
+body {
+  background-color: pink;
+  height: 100vh;
+}
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.clockbase {
+  display: flex;
+  background-color: brown;
+  border-radius: 100%;
+  width: 530px;
+  height: 530px;
+  justify-content: center;
+  align-items: center;
+  border: 5px double;
+}
+.clockinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  border: 5px double;
+}
+.hour {
+  position: absolute;
+  top: 195px;
+  width: 5px;
+  height: 80px;
+  background-color: black;
+  transform-origin: bottom;
+  border-radius: 100%;
+  animation: 43200s spin linear infinite;
+}
+.minute {
+  position: absolute;
+  top: 144px;
+  width: 5px;
+  height: 130px;
+  background-color: yellow;
+  transform-origin: bottom;
+  border-radius: 100%;
+  animation: 3600s spin linear infinite;
+}
+.second {
+  position: absolute;
+  top: 105px;
+  width: 5px;
+  height: 170px;
+  background-color: red;
+  transform-origin: bottom;
+  border-radius: 100%;
+  animation: 60s spin linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.num {
+  font-size: 30px;
+  position: relative;
+}
+.num1 {
+  bottom: 140px;
+  left: 190px;
+}
+.num2 {
+  bottom: 80px;
+  left: 230px;
+}
+.num3 {
+  left: 250px;
+}
+.num4 {
+  top: 80px;
+  left: 200px;
+}
+.num5 {
+  top: 140px;
+  left: 130px;
+}
+.num6 {
+  top: 170px;
+  left: 30px;
+}
+.num7 {
+  top: 140px;
+  right: 75px;
+}
+.num8 {
+  top: 80px;
+  right: 155px;
+}
+.num9 {
+  right: 190px;
+}
+.num10 {
+  bottom: 80px;
+  right: 180px;
+}
+.num11 {
+  bottom: 140px;
+  right: 150px;
+}
+.num12 {
+  bottom: 170px;
+  right: 110px;
+}
+.stick {
+  z-index: -1;
+  display: flex;
+  position: absolute;
+  top: 480px;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column-reverse;
+  background-color: burlywood;
+  border-radius: 50px;
+  border: 1px solid;
+  width: 30px;
+  height: 500px;
+  animation: 2s infinite ease-in-out swing;
+  transform-origin: top;
+}
+.stickend {
+  position: absolute;
+  bottom: -10px;
+  background-color: chocolate;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+}
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
